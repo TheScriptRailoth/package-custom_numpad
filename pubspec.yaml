@@ -1,7 +1,7 @@
 name: custom_numeric_pad
-description: The Custom NumPad package is a versatile Flutter library designed to seamlessly integrate customizable numeric keypads into various screens, particularly targeting payment and numeric input scenarios. This package empowers developers to implement highly adaptable and styled numeric keypads tailored to specific interface requirements.
+description: The Custom NumPad package is a versatile Flutter library designed to seamlessly integrate customizable numeric keypads into various screens, particularly targeting payment and numeric input scenarios.
 version: 0.0.2
-homepage:
+homepage: https://github.com/TheScriptRailoth/package-custom_numpad
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

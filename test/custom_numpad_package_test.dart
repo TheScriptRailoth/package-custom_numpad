@@ -4,13 +4,13 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('CustomNumPad adds number to text field', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(const MaterialApp(
       home: CustomNumPad(
         buttonHeight: 50,
         buttonWidth: 70,
         rowSpacing: 5,
         columnSpacing: 5,
-        // Add other required parameters for your CustomNumPad widget
+        // Add other required paraameters for your CustomNumPad widget
       ),
     ));
 
@@ -19,7 +19,7 @@ void main() {
   });
 
   testWidgets('CustomNumPad changes appearance with different parameters', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(const MaterialApp(
       home: CustomNumPad(
         buttonHeight: 60,
         buttonWidth: 120,
