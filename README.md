@@ -80,7 +80,11 @@ To use this widget in your Flutter application, follow these steps:
 
 Here's a visual representation of the CustomNumPad widget in action:
 
-![CustomNumPad Widget](https://drive.google.com/file/d/1BzDkpuTnAHrWv6a7QeODarOpXpSMXVEn/view?usp=drivesdk)
+<p float="left">
+  <img src="https://imgur.com/a/5CO1LaJ" alt="Image 1" width="300" />
+  <img src="https://imgur.com/a/cpQjLtQ" alt="Image 2" width="300" />
+</p>
+
 
    
 For more information visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad)
