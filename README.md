@@ -57,26 +57,33 @@ To use this widget in your Flutter application, follow these steps:
 
 ## Examples
 
-# Basic Implementation:
+1. Customized:
+
+    ```dart
+    CustomNumPad(
+         buttonHeight: 60,
+         buttonWidth: 120,
+         rowSpacing: 10,
+         columnSpacing: 10,
+         buttonRadius: 20,
+         buttonColor: Colors.red,
+         bgColor: Colors.yellow,
+         // Add other required parameters for your CustomNumPad widget
+      )
+
+2. Basic:
 
     ```dart
     CustomNumPad()
 
-    ```dart
-    CustomNumPad(
-        buttonHeight: 60,
-        buttonWidth: 120,
-        rowSpacing: 10,
-        columnSpacing: 10,
-        buttonRadius: 20,
-        buttonColor: Colors.red,
-        bgColor: Colors.yellow,
-        // Add other required parameters for your CustomNumPad widget
-    )
+## Screenshots
 
-For more detail visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad) 
+Here's a visual representation of the CustomNumPad widget in action:
 
+![CustomNumPad Widget](https://drive.google.com/file/d/1BzDkpuTnAHrWv6a7QeODarOpXpSMXVEn/view?usp=drivesdk)
 
+   
+For more information visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad)
 
-    
-    
+      
+
