@@ -1,10 +1,10 @@
-# Custom NumPad Widget
+# Custom Numeric Pad Widget
 
 A Flutter package that provides a customizable numeric pad widget for integration into various screens, such as payment interfaces.
 
 ## Overview
 
-The Custom NumPad Widget is designed to offer a customizable numeric pad interface that can be seamlessly integrated into Flutter applications, particularly in scenarios requiring numeric input, such as payment forms.
+The Custom Numeric Pad Widget is designed to offer a customizable numeric pad interface that can be seamlessly integrated into Flutter applications, particularly in scenarios requiring numeric input, such as payment forms.
 
 ### Features
 
@@ -21,12 +21,12 @@ To use this widget in your Flutter application, follow these steps:
 
    ```yaml
    dependencies:
-     custom_numpad: ^1.0.0  # Replace with the latest version
+     custom_numeric_pad: ^1.0.0  # Replace with the latest version
    
 2. Import the package in your Dart code:
     
     ```dart
-    import 'package:custom_numpad/custom_numpad.dart';
+    import 'package:custom_numeric_pad/custom_numpad_package.dart';
 
 3. Use the CustomNumPad widget in your UI:
 

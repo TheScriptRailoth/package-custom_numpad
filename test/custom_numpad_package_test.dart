@@ -1,4 +1,4 @@
-import 'package:custom_numpad/custom_numpad_package.dart';
+import 'package:custom_numeric_pad/custom_numpad_package.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
