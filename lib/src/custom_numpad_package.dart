@@ -14,10 +14,10 @@ class CustomNumPad extends StatefulWidget {
 
   const CustomNumPad({
     Key? key,
-    required this.buttonHeight,
-    required this.buttonWidth,
-    required this.rowSpacing,
-    required this.columnSpacing,
+    this.buttonHeight=75,
+    this.buttonWidth=65,
+    this.rowSpacing=5,
+    this.columnSpacing=5,
     //required this.controller,
     this.controller,
     this.cornerRadius=0.0,

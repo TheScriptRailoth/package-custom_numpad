@@ -1,39 +1,82 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Custom NumPad Widget
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A Flutter package that provides a customizable numeric pad widget for integration into various screens, such as payment interfaces.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Overview
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The Custom NumPad Widget is designed to offer a customizable numeric pad interface that can be seamlessly integrated into Flutter applications, particularly in scenarios requiring numeric input, such as payment forms.
 
-## Features
+### Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Customizable button dimensions
+- Adjustable row and column spacing
+- Control over button colors and text style
+- Easy integration with TextEditingController
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+To use this widget in your Flutter application, follow these steps:
 
-```dart
-const like = 'sample';
-```
+1. Add the dependency to your `pubspec.yaml` file:
 
-## Additional information
+   ```yaml
+   dependencies:
+     custom_numpad: ^1.0.0  # Replace with the latest version
+   
+2. Import the package in your Dart code:
+    
+    ```dart
+    import 'package:custom_numpad/custom_numpad.dart';
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+3. Use the CustomNumPad widget in your UI:
+
+    ```dart
+   CustomNumPad(
+        buttonHeight: 50,
+        buttonWidth: 70,
+        rowSpacing: 5,
+        columnSpacing: 5,
+        // Add other required parameters for your CustomNumPad widget    
+   )
+
+### Parameters
+
+| Parameter       | Required | Default     | Type                  | Description                                      |
+|-----------------|----------|-------------|-----------------------|--------------------------------------------------|
+| buttonHeight    | No       | 75          | double                | Height of the numeric pad buttons                |
+| buttonWidth     | No       | 65          | double                | Width of the numeric pad buttons                 |
+| rowSpacing      | No       | 5           | double                | Vertical spacing between rows of buttons         |
+| columnSpacing   | No       | 5           | double                | Horizontal spacing between columns of buttons    |
+| buttonRadius    | No       | 0.0         | double                | Radius for button corners                        |
+| buttonColor     | No       | F5F6FA      | Color                 | Background color for buttons                     |
+| bgColor         | No       | Transparent | Color                 | Background color for the numeric pad             |
+| cornerRadius    | No       | 0.0         | double                | Corner radius for the entire numeric pad         |
+| controller      | No       | null        | TextEditingController? | Controller for the text input field              |
+| buttonTextStyle | No       | TextStyle() | TextStyle             | Text style for the numeric pad buttons           |
+
+
+## Examples
+
+# Basic Implementation:
+
+    ```dart
+    CustomNumPad()
+
+    ```dart
+    CustomNumPad(
+        buttonHeight: 60,
+        buttonWidth: 120,
+        rowSpacing: 10,
+        columnSpacing: 10,
+        buttonRadius: 20,
+        buttonColor: Colors.red,
+        bgColor: Colors.yellow,
+        // Add other required parameters for your CustomNumPad widget
+    )
+
+For more detail visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad) 
+
+
+
+    
+    
