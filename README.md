@@ -89,7 +89,10 @@ Here's a visual representation of the CustomNumPad widget in action:
 
 This project was created and is maintained by **Ashutosh Mishra**.
 
-If you have any queries or suggestions regarding this project, feel free to contact me at am3718440@gmail.com. We appreciate your interest and contributions
+Website: [https://thescriptrailoth.github.io/](https://thescriptrailoth.github.io/)
+
+If you have any queries or suggestions regarding this project, feel free to contact me at am3718440@gmail.com. We appreciate your interest and contributions.
+
    
 For more information visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad)
 
