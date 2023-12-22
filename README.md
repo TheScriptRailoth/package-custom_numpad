@@ -53,7 +53,7 @@ To use this widget in your Flutter application, follow these steps:
 | cornerRadius      | No       | 0.0                | double                 | Corner radius for the entire numeric pad        |
 | controller        | No       | null               | TextEditingController? | Controller for the text input field             |
 | buttonTextStyle   | No       | TextStyle()        | TextStyle              | Text style for the numeric pad buttons          |
-| buttonBorderWidth | No       | 0.0                | double                 | Width of the border for the numeric pad buttons |
+| buttonBorder      | No       | 0.0                | double                 | Width of the border for the numeric pad buttons |
 | buttonBorderColor | No       | Colors.transparent | Color                  | Color of the border for the numeric pad buttons |
 
 
@@ -82,9 +82,8 @@ To use this widget in your Flutter application, follow these steps:
 
 Here's a visual representation of the CustomNumPad widget in action:
 
-<img src="screenshots/Screen1.jpg" alt="CustomNumPad Screenshot1" width="300" /> <img src="screenshots/Screen2.jpg" alt="CustomNumPad Screenshot2" width="300" />
+<img src="![Screen1](https://github.com/TheScriptRailoth/package-custom_numpad/assets/91254200/b0a440b5-3414-47bb-8432-674dc9c8b66d)" alt="CustomNumPad Screenshot1" width="300" /> <img src="![Screen2](https://github.com/TheScriptRailoth/package-custom_numpad/assets/91254200/5f9b7d2a-035c-4167-a88e-b4b8a5873893)" alt="CustomNumPad Screenshot2" width="300" />
    
 For more information visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad)
 
       
-
