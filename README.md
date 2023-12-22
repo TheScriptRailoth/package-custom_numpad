@@ -83,6 +83,13 @@ To use this widget in your Flutter application, follow these steps:
 Here's a visual representation of the CustomNumPad widget in action:
 
 <img src="screenshots/Screen1.jpg" alt="CustomNumPad Screenshot1" width="300" /> <img src="screenshots/Screen2.jpg" alt="CustomNumPad Screenshot2" width="300" />
+
+
+## Author
+
+This project was created and is maintained by **Ashutosh Mishra**.
+
+If you have any queries or suggestions regarding this project, feel free to contact me at am3718440@gmail.com. We appreciate your interest and contributions
    
 For more information visit [GitHub](https://github.com/TheScriptRailoth/package-custom_numpad)
 
