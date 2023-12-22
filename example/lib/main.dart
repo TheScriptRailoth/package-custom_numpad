@@ -38,16 +38,16 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Custom NumPad Example'),
+        title: const Text('Custom NumPad Example'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             TextFormField(
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 30
               ),
               controller: _controller,

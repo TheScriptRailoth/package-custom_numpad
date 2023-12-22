@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.3] - 2023-12-22
+## [0.0.4]
+
+### Added
+- Added buttonBorder parameter for border width of button of numeric pad.
+- Added buttonBorderColor parameter for color of border of numeric pad.
+
+
+## [0.0.3] 
 
 ### Added
 - Example of Implementing the widget.

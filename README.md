@@ -41,18 +41,20 @@ To use this widget in your Flutter application, follow these steps:
 
 ### Parameters
 
-| Parameter       | Required | Default     | Type                   | Description                                   |
-|-----------------|----------|-------------|------------------------|-----------------------------------------------|
-| buttonHeight    | No       | 75          | double                 | Height of the numeric pad buttons             |
-| buttonWidth     | No       | 65          | double                 | Width of the numeric pad buttons              |
-| rowSpacing      | No       | 5           | double                 | Vertical spacing between rows of buttons      |
-| columnSpacing   | No       | 5           | double                 | Horizontal spacing between columns of buttons |
-| buttonRadius    | No       | 0.0         | double                 | Radius for button corners                     |
-| buttonColor     | No       | F5F6FA      | Color                  | Background color for buttons                  |
-| bgColor         | No       | Transparent | Color                  | Background color for the numeric pad          |
-| cornerRadius    | No       | 0.0         | double                 | Corner radius for the entire numeric pad      |
-| controller      | No       | null        | TextEditingController? | Controller for the text input field           |
-| buttonTextStyle | No       | TextStyle() | TextStyle              | Text style for the numeric pad buttons        |
+| Parameter         | Required | Default            | Type                   | Description                                     |
+|-------------------|----------|--------------------|------------------------|-------------------------------------------------|
+| buttonHeight      | No       | 75                 | double                 | Height of the numeric pad buttons               |
+| buttonWidth       | No       | 65                 | double                 | Width of the numeric pad buttons                |
+| rowSpacing        | No       | 5                  | double                 | Vertical spacing between rows of buttons        |
+| columnSpacing     | No       | 5                  | double                 | Horizontal spacing between columns of buttons   |
+| buttonRadius      | No       | 0.0                | double                 | Radius for button corners                       |
+| buttonColor       | No       | F5F6FA             | Color                  | Background color for buttons                    |
+| bgColor           | No       | Transparent        | Color                  | Background color for the numeric pad            |
+| cornerRadius      | No       | 0.0                | double                 | Corner radius for the entire numeric pad        |
+| controller        | No       | null               | TextEditingController? | Controller for the text input field             |
+| buttonTextStyle   | No       | TextStyle()        | TextStyle              | Text style for the numeric pad buttons          |
+| buttonBorderWidth | No       | 0.0                | double                 | Width of the border for the numeric pad buttons |
+| buttonBorderColor | No       | Colors.transparent | Color                  | Color of the border for the numeric pad buttons |
 
 
 ## Examples

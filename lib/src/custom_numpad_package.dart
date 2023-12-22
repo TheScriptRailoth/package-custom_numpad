@@ -1,6 +1,7 @@
 /// A customizable numeric pad widget for Flutter applications.
 /// This widget allows users to create a numeric pad interface with customizable button dimensions, colors, and text styles, along with a text controller for input.
 import 'package:flutter/material.dart';
+
 class CustomNumPad extends StatefulWidget {
   ///The height of each numeric pad button.
   final double buttonHeight;
@@ -25,6 +26,12 @@ class CustomNumPad extends StatefulWidget {
 
   ///The corner radius of entire numeric pad.
   final double cornerRadius;
+
+  ///The border size of numeric pad buttons.
+  final double buttonBorder;
+
+  ///The border's color of numeric pad buttons.
+  final Color buttonBorderColor;
 
   ///The controller that manages the input text field.
   final TextEditingController? controller;
@@ -56,23 +63,24 @@ class CustomNumPad extends StatefulWidget {
   /// [buttonTextStyle] defines the text style applied to the numeric pad buttons. The default style is bold, size 24, with the color set to Color(0xff005E54).
   const CustomNumPad({
     Key? key,
-    this.buttonHeight=80,
-    this.buttonWidth=95,
-    this.rowSpacing=5,
-    this.columnSpacing=5,
+    this.buttonHeight = 80,
+    this.buttonWidth = 95,
+    this.rowSpacing = 5,
+    this.columnSpacing = 5,
     //required this.controller,
     this.controller,
-    this.cornerRadius=0.0,
-    this.bgColor=Colors.transparent,
+    this.cornerRadius = 0.0,
+    this.bgColor = Colors.transparent,
     this.buttonRadius = 17,
     this.buttonColor = const Color(0xffF5F6FA),
-    this.buttonTextStyle= const TextStyle(
+    this.buttonBorder = 0.0,
+    this.buttonBorderColor = Colors.transparent,
+    this.buttonTextStyle = const TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 24,
         color: Color(0xff005E54),
-        fontFamily: null
-    ),
-  }) :super(key: key);
+        fontFamily: null),
+  }) : super(key: key);
 
   @override
   State<CustomNumPad> createState() => _CustomNumPadState();
@@ -84,12 +92,12 @@ class _CustomNumPadState extends State<CustomNumPad> {
   Widget build(BuildContext context) {
     //Padding around entire widget
     return Padding(
-        padding:  const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Center(
           child: Container(
             //Setting the size and appearance of the numeric pad
-            height: (widget.rowSpacing*3)+(widget.buttonHeight*4),
-            width: (widget.columnSpacing*3)+(widget.buttonWidth*3),
+            height: (widget.rowSpacing * 3) + (widget.buttonHeight * 4),
+            width: (widget.columnSpacing * 3) + (widget.buttonWidth * 3),
             decoration: BoxDecoration(
               color: widget.bgColor,
               borderRadius: BorderRadius.circular(widget.cornerRadius),
@@ -102,35 +110,53 @@ class _CustomNumPadState extends State<CustomNumPad> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildButton(1), // Creating a button for number 1
-                    SizedBox(width: widget.columnSpacing,),
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
                     _buildButton(2), // Creating a button for number 2
-                    SizedBox(width: widget.columnSpacing,),
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
                     _buildButton(3), // Creating a button for number 3
                   ],
                 ),
-                SizedBox(height: widget.rowSpacing,), // Space between rows of buttons
+                SizedBox(
+                  height: widget.rowSpacing,
+                ), // Space between rows of buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildButton(4), // Creating a button for number 4
-                    SizedBox(width: widget.columnSpacing,),
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
                     _buildButton(5), // Creating a button for number 5
-                    SizedBox(width: widget.columnSpacing,),
-                    _buildButton(6),// Creating a button for number 6
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
+                    _buildButton(6), // Creating a button for number 6
                   ],
                 ),
-                SizedBox(height: widget.rowSpacing,), // Space between rows of buttons
+                SizedBox(
+                  height: widget.rowSpacing,
+                ), // Space between rows of buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _buildButton(7),// Creating button for number 7
-                    SizedBox(width: widget.columnSpacing,),
-                    _buildButton(8),// Creating button for number 8
-                    SizedBox(width: widget.columnSpacing,),
-                    _buildButton(9),// Creating button for number 9
+                    _buildButton(7), // Creating button for number 7
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
+                    _buildButton(8), // Creating button for number 8
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
+                    _buildButton(9), // Creating button for number 9
                   ],
                 ),
-                SizedBox(height: widget.rowSpacing,), // Space between rows of buttons
+                SizedBox(
+                  height: widget.rowSpacing,
+                ), // Space between rows of buttons
                 //Special buttons (dot, zero, backspace)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,65 +165,93 @@ class _CustomNumPadState extends State<CustomNumPad> {
                       height: widget.buttonHeight,
                       width: widget.buttonWidth,
                       decoration: BoxDecoration(
-                        color: widget.buttonColor,
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
-                      ),
+                          color: widget.buttonColor,
+                          borderRadius:
+                              BorderRadius.circular(widget.buttonRadius),
+                          border: Border.all(
+                              width: widget.buttonBorder,
+                              color: widget.buttonBorderColor)),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
+                        borderRadius:
+                            BorderRadius.circular(widget.buttonRadius),
                         child: TextButton(
-                          onPressed: (){
-                            widget.controller?.text+='.';
+                          onPressed: () {
+                            widget.controller?.text += '.';
                           },
-                          child: Text('.', style: TextStyle(
-                            fontWeight: widget.buttonTextStyle.fontWeight,
-                            fontSize: (widget.buttonTextStyle.fontSize)!+15,
-                            color: widget.buttonTextStyle.color,
+                          child: Text(
+                            '.',
+                            style: TextStyle(
+                              fontWeight: widget.buttonTextStyle.fontWeight,
+                              fontSize: (widget.buttonTextStyle.fontSize)! + 15,
+                              color: widget.buttonTextStyle.color,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                            textAlign: TextAlign.center,),
                         ),
                       ),
-                    ),  //Dot Button
-                    SizedBox(width: widget.columnSpacing,),
+                    ), //Dot Button
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
                     Container(
                       height: widget.buttonHeight,
                       width: widget.buttonWidth,
                       decoration: BoxDecoration(
-                        color: widget.buttonColor,
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
-                      ),
+                          color: widget.buttonColor,
+                          borderRadius:
+                              BorderRadius.circular(widget.buttonRadius),
+                          border: Border.all(
+                              width: widget.buttonBorder,
+                              color: widget.buttonBorderColor)),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
+                        borderRadius:
+                            BorderRadius.circular(widget.buttonRadius),
                         child: TextButton(
-                          onPressed: (){
-                            widget.controller?.text+='0';
+                          onPressed: () {
+                            widget.controller?.text += '0';
                           },
-                          child: Text('0', style: TextStyle(
-                            fontWeight: widget.buttonTextStyle.fontWeight,
-                            fontSize: widget.buttonTextStyle.fontSize,
-                            color: widget.buttonTextStyle.color,
+                          child: Text(
+                            '0',
+                            style: TextStyle(
+                              fontWeight: widget.buttonTextStyle.fontWeight,
+                              fontSize: widget.buttonTextStyle.fontSize,
+                              color: widget.buttonTextStyle.color,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                            textAlign: TextAlign.center,),
                         ),
                       ),
                     ), //Zero Button
-                    SizedBox(width: widget.columnSpacing,),
+                    SizedBox(
+                      width: widget.columnSpacing,
+                    ),
                     Container(
                       height: widget.buttonHeight,
                       width: widget.buttonWidth,
                       decoration: BoxDecoration(
-                        color: widget.buttonColor,
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
-                      ),
+                          color: widget.buttonColor,
+                          borderRadius:
+                              BorderRadius.circular(widget.buttonRadius),
+                          border: Border.all(
+                              color: widget.buttonBorderColor,
+                              width: widget.buttonBorder)),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(widget.buttonRadius),
+                        borderRadius:
+                            BorderRadius.circular(widget.buttonRadius),
                         child: TextButton(
-                          onPressed: (){
-                            if(widget.controller!.text.isNotEmpty){
-                              final String xyz= widget.controller!.text.substring(0,widget.controller!.text.length-1);
-                              widget.controller?.text=xyz;
+                          onPressed: () {
+                            if (widget.controller!.text.isNotEmpty) {
+                              final String xyz = widget.controller!.text
+                                  .substring(
+                                      0, widget.controller!.text.length - 1);
+                              widget.controller?.text = xyz;
                             }
                           },
-                          child: Icon(Icons.backspace_outlined, color: widget.buttonTextStyle.color, size: widget.buttonTextStyle.fontSize!+5,),
+                          child: Icon(
+                            Icons.backspace_outlined,
+                            color: widget.buttonTextStyle.color,
+                            size: widget.buttonTextStyle.fontSize! + 5,
+                          ),
                         ),
                       ),
                     ) //Backspace button
@@ -206,32 +260,41 @@ class _CustomNumPadState extends State<CustomNumPad> {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
+
   //Helper method to create numeric buttons
-  Widget _buildButton( int number){
+  Widget _buildButton(int number) {
     return Container(
       height: widget.buttonHeight, //Sets the height of the button
       width: widget.buttonWidth, // Sets the width of the button
       decoration: BoxDecoration(
-        color: widget.buttonColor,  // Sets the button's background color
-        borderRadius: BorderRadius.circular(widget.buttonRadius), //Rounds the button corners
-      ),
+          color: widget.buttonColor, // Sets the button's background color
+          borderRadius: BorderRadius.circular(
+              widget.buttonRadius), //Rounds the button corners
+          border: Border.all(
+              width: widget.buttonBorder, color: widget.buttonBorderColor)),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(widget.buttonRadius),
         child: TextButton(
-          onPressed: (){
+          onPressed: () {
             //Appends the tapped number to the controller's text
-            widget.controller?.text+=number.toString();
+            widget.controller?.text += number.toString();
           },
-          child: Text(number.toString(), style: TextStyle(  //Displays the number on the screen
-            color: widget.buttonTextStyle.color, // Sets the text color
-            fontSize: widget.buttonTextStyle.fontSize, // Sets the text font size
-            fontWeight: widget.buttonTextStyle.fontWeight, // Sets the text font weight
-            fontFamily: widget.buttonTextStyle.fontFamily, // Sets the text font family
-          ),
-            textAlign: TextAlign.center,), // Aligns the text to the center of the button
+          child: Text(
+            number.toString(),
+            style: TextStyle(
+              //Displays the number on the screen
+              color: widget.buttonTextStyle.color, // Sets the text color
+              fontSize:
+                  widget.buttonTextStyle.fontSize, // Sets the text font size
+              fontWeight: widget
+                  .buttonTextStyle.fontWeight, // Sets the text font weight
+              fontFamily: widget
+                  .buttonTextStyle.fontFamily, // Sets the text font family
+            ),
+            textAlign: TextAlign.center,
+          ), // Aligns the text to the center of the button
         ),
       ),
     );
